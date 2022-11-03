@@ -5,7 +5,6 @@ const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const svgSprite = require('gulp-svg-sprite');
 
-
 const browsersync = () => {
   browserSync.init({
     server: { baseDir: './build/' },
@@ -15,7 +14,7 @@ const browsersync = () => {
 };
 
 const sass2css = () => {
-  return src(['./src/sass/*.scss'], { sourcemaps: true })
+  return src(['./src/sass/*.scss'])
     .pipe(sass())
     .pipe(concat('app.css'))
     .pipe(dest('./build/styles/'))
@@ -34,6 +33,19 @@ const destImages = () => {
     .pipe(dest('./build/images/'))
 };
 
+const svgsprite = () => {
+  return src('./src/images/icons/minSVG/*.svg')
+    .pipe(svgSprite({
+      mode: {
+        stack: {
+          sprite: "../sprite.svg"
+        }
+      },
+    }))
+
+    .pipe(dest('./build/images/icons'));
+};
+
 const startWatch = () => {
   watch(['./**/*.scss'], sass2css);
   watch(['./**/*.pug'], pug2html);
@@ -42,11 +54,12 @@ const startWatch = () => {
 const build = () => {
   sass2css();
   pug2html();
-  destImages;
+  destImages();
 };
 
 exports.startWatch = startWatch;
 exports.browsersync = browsersync;
+exports.svgsprite = svgsprite;
 
 exports.build = build;
 

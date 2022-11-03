@@ -9,5 +9,11 @@ html(lang="en")
     link(rel="stylesheet", href="./styles/app.css")
 
   body
-  .newclass 
-    p Lorem ipsum dolor sit amet consectetur adipisicxercitationem vel nam itaque.
+    .container-fluid.bg-light
+      .row
+        .col-12.col-lg-4.p-0
+          include header.pug 
+          .row.sidebar
+            .col Sidebar-section
+        .col-12.col-lg-8 main
+        
