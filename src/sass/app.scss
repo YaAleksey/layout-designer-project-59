@@ -1,14 +1,34 @@
-// @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "./myVariables";
 
-// @import "../../node_modules/bootstrap/scss/variables";
-// @import "../../node_modules/bootstrap/scss/maps";
-// @import "../../node_modules/bootstrap/scss/mixins";
-// @import "../../node_modules/bootstrap/scss/utilities";
-
-// @import "../../node_modules/bootstrap/scss/grid";
-// @import "../../node_modules/bootstrap/scss/reboot";
-
 @import "header";
 @import "cleanPage";
+@import "contacts";
+
+body {
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-normal;
+}
+
+.index-wrapper {
+  height: 100vh;
+  margin: 24px;
+
+  @include hide-scrollbar();
+}
+
+.greeting-section {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 799px) {
+  .index-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+}

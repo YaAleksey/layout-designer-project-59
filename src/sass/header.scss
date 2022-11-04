@@ -6,20 +6,19 @@
 // @import "../../node_modules/bootstrap/scss/utilities";
 
 .header {
-  background-color: $header-bg;
-  font-family: $font-family-sans-serif;
-  font-weight: $font-weight-normal;
+  background-color: $lilac;
   font-size: $font-size-sm;
   border-radius: $border-radius-xl 0 0 0;
 
   overflow: hidden;
 
   a {
-    color: $col-fb;
+    color: $white-fb;
   }
 
   .list-inline {
     display: flex;
+    justify-content: center;
     align-items: center;
   }
 

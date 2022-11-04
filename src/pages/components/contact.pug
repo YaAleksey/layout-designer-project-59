@@ -1,0 +1,57 @@
+
+-
+  var contacts = {
+    "A": [{
+      name: "Алексей Примадонин",
+      status: "Онлайн",
+      avatar: "/images/avatar_3.jpg"
+    }],
+
+    "В": [{
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "/images/avatar_4.jpg"
+    }],
+
+    "Д": [{
+      name: "Джедай Падаванов",
+      status: "Был онлайн вчера",
+      avatar: "/images/avatar_2.jpg"
+    }],
+
+    "К": [{
+      name: "Кодовёнок Хекслетович",
+      status: "Был онлайн 3 часа назад",
+      avatar: "/images/avatar_1.jpg"
+    },
+    {
+      name: "Королева Верстальщина",
+      status: "Была онлайн вчера",
+      avatar: "/images/avatar_5.jpg"
+    }],
+
+    "П": [{
+      name: "Питонист Джангович",
+      status: "Был онлайн вчера",
+      avatar: "/images/avatar_6.jpg"
+    }],
+  }
+
+.contacts-sidebar
+  .h2.title.mt-5.mx-4.mb-4 Контакты
+
+  include search.pug
+
+  .contacts-block
+    each users, letter in contacts
+      .text-muted.font-size-base.mx-3.mt-5.mb-3 #{letter}
+      a(href="#", class="contacts-group")
+        each user in users
+          .contacts-body.row.py-4.mx-4.border-bottom
+            .col-auto.p-0
+              .contacts-ava.ms-3
+                img(src=`${user.avatar}`, alt="user avatar", width="50px", height="50px", class="rounded-circle")
+            .col.ms-4.p-0
+              p.m-0.contacts-name.font-size-base.fw-bold #{user.name}
+              p.m-0.contacts-status.font-size-sm.text-muted #{user.status}
+

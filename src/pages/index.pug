@@ -5,15 +5,18 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Layout-designer-project-59
-
+  
     link(rel="stylesheet", href="./styles/app.css")
 
   body
-    .container-fluid.bg-light
-      .row
-        .col-12.col-lg-4.p-0
-          include header.pug 
-          .row.sidebar
-            .col Sidebar-section
-        .col-12.col-lg-8 main
+    .index-wrapper
+      .container-fluid.bg-light
+        .row
+          .col-12.col-md-6.col-xl-4.border-end
+            include header.pug
+            include components/contact.pug
+
+          .col-12.col-md-6.col-xl-8
+            .greeting-section
+              include avatar.pug
         

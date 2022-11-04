@@ -14,7 +14,7 @@ const browsersync = () => {
 };
 
 const sass2css = () => {
-  return src(['./src/sass/*.scss'])
+  return src('./src/sass/*.scss')
     .pipe(sass())
     .pipe(concat('app.css'))
     .pipe(dest('./build/styles/'))
@@ -22,7 +22,7 @@ const sass2css = () => {
 };
 
 const pug2html = () => {
-  return src(['./src/pages/*.pug'])
+  return src('./src/pages/**/*.pug')
     .pipe(pug())
     .pipe(dest('./build/'))
     .pipe(browserSync.stream())
@@ -47,20 +47,20 @@ const svgsprite = () => {
 };
 
 const startWatch = () => {
-  watch(['./**/*.scss'], sass2css);
-  watch(['./**/*.pug'], pug2html);
+  watch('./**/*.scss', sass2css);
+  watch('./**/*.pug', pug2html);
 };
 
 const build = () => {
   sass2css();
   pug2html();
-  destImages();
 };
 
 exports.startWatch = startWatch;
 exports.browsersync = browsersync;
 exports.svgsprite = svgsprite;
+exports.pug2html = pug2html;
 
 exports.build = build;
 
-exports.default = parallel(browsersync, startWatch);
+exports.default = parallel(sass2css, pug2html, browsersync, startWatch);

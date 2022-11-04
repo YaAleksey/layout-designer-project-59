@@ -1,0 +1,26 @@
+@import "./myVariables";
+@import "../../node_modules/bootstrap/scss/variables";
+
+.contacts-body {
+  align-items: center;
+
+  .contacts-name {
+    color: $gray-900;
+  }
+
+  .contacts-status {
+    color: $gray-600;
+  }
+}
+
+a > .contacts-body:hover {
+  background-color: $lilac;
+
+  & .contacts-name {
+    color: $white-fb;
+  }
+
+  & .contacts-status {
+    color: $gray-ef;
+  }
+}

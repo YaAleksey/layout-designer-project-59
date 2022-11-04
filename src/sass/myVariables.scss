@@ -1,7 +1,18 @@
 @import "../../node_modules/bootstrap/scss/variables";
 
-$header-bg: #4545a5;
-$col-fb: #fbfbfb;
+$lilac: #4545a5;
+$white-fb: #fbfbfb;
+$gray-ef: #efefef;
+
+// $spacers: (
+//   0: 0,
+//   1: $spacer * 0.25,
+//   2: $spacer * 0.5,
+//   3: $spacer,
+//   4: $spacer * 1.5,
+//   sp2: $spacer * 2,
+//   5: $spacer * 3,
+// );
 
 $grid-breakpoints: (
   xs: 0,
@@ -21,3 +32,18 @@ $container-max-widths: (
 );
 
 $border-radius-xl: $spacer;
+$enable-shadows: true;
+
+@mixin hide-scrollbar() {
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
