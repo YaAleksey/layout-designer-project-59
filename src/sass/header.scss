@@ -8,7 +8,6 @@
 .header {
   background-color: $lilac;
   font-size: $font-size-sm;
-  border-radius: $border-radius-xl 0 0 0;
 
   overflow: hidden;
 
@@ -16,14 +15,61 @@
     color: $white-fb;
   }
 
-  .list-inline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  .menu {
+    display: grid;
+    grid-template: auto / auto minmax(auto, 180px) auto auto auto;
+    grid-template-areas: "logo . contacts messages profile";
 
-  .list-inline-item {
-    padding: 0;
-    margin: 0;
+    //justify-content: space-between;
+    align-items: center;
+
+    margin: 16px 16px 16px 16px;
+
+    .menu-logo {
+      grid-area: logo;
+    }
+
+    .menu-contacts {
+      grid-area: contacts;
+    }
+
+    .menu-messages {
+      grid-area: messages;
+    }
+
+    .menu-profile {
+      grid-area: profile;
+    }
+
+    .menu-item {
+      .menu-link {
+        div {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .header {
+    border-radius: $border-radius-xl 0 0 0;
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      margin: 16px 32px 16px 16px;
+
+      .menu-item {
+        .menu-link {
+          display: flex;
+
+          div {
+            display: inline;
+
+            margin-left: 8px;
+          }
+        }
+      }
+    }
   }
 }

@@ -37,7 +37,7 @@
     }],
   }
 
-.contacts-sidebar
+.contacts-sidebar.order-md-2#contacts
   .h2.title.mt-5.mx-4.mb-4 Контакты
 
   include search.pug
@@ -45,7 +45,7 @@
   .contacts-block
     each users, letter in contacts
       .text-muted.font-size-base.mx-3.mt-5.mb-3 #{letter}
-      a(href="#", class="contacts-group")
+      a(href="", class="contacts-group")
         each user in users
           .contacts-body.row.py-4.mx-4.border-bottom
             .col-auto.p-0

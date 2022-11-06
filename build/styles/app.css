@@ -10701,136 +10701,60 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.mgr-40 {
+  margin-right: 40px;
+}
+
+.mgr-40 {
+  margin-right: 40px;
+}
+
 .header {
   background-color: #4545a5;
   font-size: 0.875rem;
-  border-radius: 1rem 0 0 0;
   overflow: hidden;
 }
 .header a {
   color: #fbfbfb;
 }
-.header .list-inline {
-  display: flex;
-  justify-content: center;
+.header .menu {
+  display: grid;
+  grid-template: auto/auto minmax(auto, 180px) auto auto auto;
+  grid-template-areas: "logo . contacts messages profile";
   align-items: center;
+  margin: 16px 16px 16px 16px;
 }
-.header .list-inline-item {
-  padding: 0;
-  margin: 0;
+.header .menu .menu-logo {
+  grid-area: logo;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+.header .menu .menu-contacts {
+  grid-area: contacts;
 }
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
+.header .menu .menu-messages {
+  grid-area: messages;
 }
-
-:focus,
-:active {
-  outline: none;
+.header .menu .menu-profile {
+  grid-area: profile;
 }
-
-a,
-a:visited {
-  text-decoration: none;
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
+.header .menu .menu-item .menu-link div {
   display: none;
 }
 
-button {
-  cursor: pointer;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-.contacts-body {
-  align-items: center;
-}
-.contacts-body .contacts-name {
-  color: #212529;
-}
-.contacts-body .contacts-status {
-  color: #6c757d;
-}
-
-a > .contacts-body:hover {
-  background-color: #4545a5;
-}
-a > .contacts-body:hover .contacts-name {
-  color: #fbfbfb;
-}
-a > .contacts-body:hover .contacts-status {
-  color: #efefef;
-}
-
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 400;
-}
-
-.index-wrapper {
-  height: 100vh;
-  margin: 24px;
-}
-.index-wrapper {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.index-wrapper::-webkit-scrollbar {
-  display: none;
-}
-
-.greeting-section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-@media (max-width: 799px) {
-  .index-wrapper {
-    width: 100%;
-    margin: 0;
+@media (min-width: 768px) {
+  .header {
+    border-radius: 1rem 0 0 0;
+  }
+  .header .menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 32px 16px 16px;
+  }
+  .header .menu .menu-item .menu-link {
+    display: flex;
+  }
+  .header .menu .menu-item .menu-link div {
+    display: inline;
+    margin-left: 8px;
   }
 }
 *,
@@ -10892,6 +10816,11 @@ ul li {
 img {
   vertical-align: top;
 }
+
+.mgr-40 {
+  margin-right: 40px;
+}
+
 .contacts-body {
   align-items: center;
 }
@@ -10911,23 +10840,184 @@ a > .contacts-body:hover .contacts-name {
 a > .contacts-body:hover .contacts-status {
   color: #efefef;
 }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 400;
+}
+
+.index-wrapper {
+  margin: 0;
+}
+.index-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.index-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.left-section {
+  padding: 0;
+}
+
+.greeting-section {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .index-wrapper {
+    margin: 24px 24px;
+  }
+  .greeting-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+.mgr-40 {
+  margin-right: 40px;
+}
+
+.contacts-body {
+  align-items: center;
+}
+.contacts-body .contacts-name {
+  color: #212529;
+}
+.contacts-body .contacts-status {
+  color: #6c757d;
+}
+
+a > .contacts-body:hover {
+  background-color: #4545a5;
+}
+a > .contacts-body:hover .contacts-name {
+  color: #fbfbfb;
+}
+a > .contacts-body:hover .contacts-status {
+  color: #efefef;
+}
+.mgr-40 {
+  margin-right: 40px;
+}
+
 .header {
   background-color: #4545a5;
   font-size: 0.875rem;
-  border-radius: 1rem 0 0 0;
   overflow: hidden;
 }
 .header a {
   color: #fbfbfb;
 }
-.header .list-inline {
-  display: flex;
-  justify-content: center;
+.header .menu {
+  display: grid;
+  grid-template: auto/auto minmax(auto, 180px) auto auto auto;
+  grid-template-areas: "logo . contacts messages profile";
   align-items: center;
+  margin: 16px 16px 16px 16px;
 }
-.header .list-inline-item {
-  padding: 0;
-  margin: 0;
+.header .menu .menu-logo {
+  grid-area: logo;
+}
+.header .menu .menu-contacts {
+  grid-area: contacts;
+}
+.header .menu .menu-messages {
+  grid-area: messages;
+}
+.header .menu .menu-profile {
+  grid-area: profile;
+}
+.header .menu .menu-item .menu-link div {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    border-radius: 1rem 0 0 0;
+  }
+  .header .menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 32px 16px 16px;
+  }
+  .header .menu .menu-item .menu-link {
+    display: flex;
+  }
+  .header .menu .menu-item .menu-link div {
+    display: inline;
+    margin-left: 8px;
+  }
+}
+.mgr-40 {
+  margin-right: 40px;
+}
+.mgr-40 {
+  margin-right: 40px;
 }
 
 .search-block {
@@ -10941,4 +11031,7 @@ a > .contacts-body:hover .contacts-status {
 }
 .search-block input::placeholder {
   color: #6c757d;
+}
+.mgr-40 {
+  margin-right: 40px;
 }

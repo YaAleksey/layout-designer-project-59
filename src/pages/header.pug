@@ -1,16 +1,19 @@
-header.header
-  ul.list-inline.mx-0.my-3
-    li.list-inline-item.ms-3
-      img(src="./images/icons/sprite.svg#logo", width="25px", height="40px", alt="logo Hexlet")
+.header.order-md-1
+  .menu
+    .menu-item.menu-logo
+      img(src="./images/icons/sprite.svg#logo", class="" width="25px", height="40px", alt="logo Hexlet")
       
-    li.list-inline-item.ms-4
-      img(src="./images/icons/sprite.svg#people", class="", width="25px", height="19px", alt="people")
-      a(href="#" class="ms-2") Контакты
+    .menu-item.menu-contacts
+      a(href="#contacts", class="menu-link")
+        img(src="./images/icons/sprite.svg#people", class="", width="25px", height="19px", alt="people")
+        div(class="") Контакты 
 
-    li.list-inline-item.ms-4
-      img(src="./images/icons/sprite.svg#chat", class="", width="25px", height="23px", alt="chat")
-      a(href="#" class="ms-2") Сообщения
+    .menu-item.menu-messages
+      a(href="#", class="menu-link")
+        img(src="./images/icons/sprite.svg#chat", class="", width="25px", height="23px", alt="chat")
+        div(class="") Сообщения
 
-    li.list-inline-item.ms-4
-      img(src="./images/icons/sprite.svg#person", class="", width="19px", height="19px", alt="person")
-      a(href="#" class="ms-2") Профиль
+    .menu-item.menu-profile
+      a(href="#", class="menu-link")
+        img(src="./images/icons/sprite.svg#person", class="", width="19px", height="19px", alt="person")
+        div(class="") Профиль

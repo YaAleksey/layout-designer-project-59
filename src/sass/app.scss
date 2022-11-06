@@ -11,24 +11,30 @@ body {
 }
 
 .index-wrapper {
-  height: 100vh;
-  margin: 24px;
+  margin: 0;
 
   @include hide-scrollbar();
 }
 
-.greeting-section {
-  height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.left-section {
+  padding: 0;
 }
 
-@media (max-width: 799px) {
+.greeting-section {
+  display: none;
+}
+
+@media (min-width: 768px) {
   .index-wrapper {
-    width: 100%;
-    margin: 0;
+    margin: 24px 24px;
+  }
+
+  .greeting-section {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 }

@@ -12,11 +12,10 @@ html(lang="en")
     .index-wrapper
       .container-fluid.bg-light
         .row
-          .col-12.col-md-6.col-xl-4.border-end
-            include header.pug
+          .left-section.col-12.col-md-6.col-xl-4.border-end.d-flex.flex-column
             include components/contact.pug
+            include header.pug
 
-          .col-12.col-md-6.col-xl-8
+          .main-section.col-12.col-md-6.col-xl-8
             .greeting-section
               include avatar.pug
-        
