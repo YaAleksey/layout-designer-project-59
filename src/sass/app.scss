@@ -8,16 +8,29 @@
 body {
   font-family: $font-family-sans-serif;
   font-weight: $font-weight-normal;
+
+  // @include hide-scrollbar();
 }
 
 .index-wrapper {
+  height: 100vh;
   margin: 0;
-
-  @include hide-scrollbar();
 }
 
 .left-section {
+  height: 100vh;
+  overflow-y: hidden;
+
   padding: 0;
+}
+
+.tab-header {
+  @include hide-scrollbar();
+}
+
+.tab-content {
+  height: 100%;
+  overflow-y: auto;
 }
 
 .greeting-section {
@@ -25,13 +38,15 @@ body {
 }
 
 @media (min-width: 768px) {
+  .left-section {
+    border-right: 1px solid $gray-300;
+  }
+
   .index-wrapper {
     margin: 24px 24px;
   }
 
   .greeting-section {
-    height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;

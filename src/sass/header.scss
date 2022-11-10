@@ -5,71 +5,78 @@
 // @import "../../node_modules/bootstrap/scss/maps";
 // @import "../../node_modules/bootstrap/scss/utilities";
 
-.header {
+.nav {
   background-color: $lilac;
   font-size: $font-size-sm;
 
-  overflow: hidden;
+  padding: $spacer;
 
-  a {
-    color: $white-fb;
+  display: grid;
+  align-items: center;
+
+  grid-template: auto / auto minmax(auto, 180px) auto auto auto;
+
+  .logo-item {
+    grid-column: 1 / 2;
+    padding-left: 0;
+  }
+  .contacts-item {
+    grid-column: 3 / 4;
+  }
+  .chats-item {
+    grid-column: 4 / 5;
+  }
+  .profile-item {
+    grid-column: 5 / 6;
+    padding-right: 27px;
   }
 
-  .menu {
-    display: grid;
-    grid-template: auto / auto minmax(auto, 180px) auto auto auto;
-    grid-template-areas: "logo . contacts messages profile";
+  li {
+    padding-left: 40px;
+  }
 
-    //justify-content: space-between;
+  li.nav-item {
     align-items: center;
 
-    margin: 16px 16px 16px 16px;
+    .nav-link {
+      display: flex;
 
-    .menu-logo {
-      grid-area: logo;
-    }
+      margin: 0;
+      padding: 0;
 
-    .menu-contacts {
-      grid-area: contacts;
-    }
-
-    .menu-messages {
-      grid-area: messages;
-    }
-
-    .menu-profile {
-      grid-area: profile;
-    }
-
-    .menu-item {
-      .menu-link {
-        div {
-          display: none;
-        }
+      div.nav-text {
+        display: none;
+        // color: $white-fb;
       }
     }
   }
 }
 
 @media (min-width: 768px) {
-  .header {
-    border-radius: $border-radius-xl 0 0 0;
-    .menu {
-      display: flex;
-      justify-content: space-between;
-      margin: 16px 32px 16px 16px;
-
-      .menu-item {
-        .menu-link {
-          display: flex;
-
-          div {
-            display: inline;
-
-            margin-left: 8px;
-          }
-        }
-      }
-    }
+  .nav {
+    border-radius: $spacer 0px 0px 0px;
   }
 }
+
+// @media (min-width: 768px) {
+//   .header {
+//     border-radius: $border-radius-xl 0 0 0;
+//     .menu {
+//       display: flex;
+//       justify-content: space-between;
+//       margin: 16px 32px 16px 16px;
+
+//       .menu-item {
+//         .menu-link {
+//           display: flex;
+
+//           div {
+//             display: inline;
+
+//             margin-left: 8px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

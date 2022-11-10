@@ -33,6 +33,11 @@ const destImages = () => {
     .pipe(dest('./build/images/'))
 };
 
+const copyJS = () => {
+  return src(['./node_modules/bootstrap/dist/js/bootstrap.min.js'])
+    .pipe(dest('./src/js/'))
+};
+
 const svgsprite = () => {
   return src('./src/images/icons/minSVG/*.svg')
     .pipe(svgSprite({
@@ -60,7 +65,9 @@ exports.startWatch = startWatch;
 exports.browsersync = browsersync;
 exports.svgsprite = svgsprite;
 exports.pug2html = pug2html;
+exports.copyJS = copyJS;
 
 exports.build = build;
 
-exports.default = parallel(sass2css, pug2html, browsersync, startWatch);
+// exports.default = parallel(sass2css, pug2html, browsersync, startWatch);
+exports.default = parallel(sass2css, pug2html, startWatch);

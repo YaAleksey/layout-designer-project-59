@@ -10709,52 +10709,46 @@ textarea.form-control-lg {
   margin-right: 40px;
 }
 
-.header {
+.nav {
   background-color: #4545a5;
   font-size: 0.875rem;
-  overflow: hidden;
-}
-.header a {
-  color: #fbfbfb;
-}
-.header .menu {
+  padding: 1rem;
   display: grid;
-  grid-template: auto/auto minmax(auto, 180px) auto auto auto;
-  grid-template-areas: "logo . contacts messages profile";
   align-items: center;
-  margin: 16px 16px 16px 16px;
+  grid-template: auto/auto minmax(auto, 180px) auto auto auto;
 }
-.header .menu .menu-logo {
-  grid-area: logo;
+.nav .logo-item {
+  grid-column: 1/2;
+  padding-left: 0;
 }
-.header .menu .menu-contacts {
-  grid-area: contacts;
+.nav .contacts-item {
+  grid-column: 3/4;
 }
-.header .menu .menu-messages {
-  grid-area: messages;
+.nav .chats-item {
+  grid-column: 4/5;
 }
-.header .menu .menu-profile {
-  grid-area: profile;
+.nav .profile-item {
+  grid-column: 5/6;
+  padding-right: 27px;
 }
-.header .menu .menu-item .menu-link div {
+.nav li {
+  padding-left: 40px;
+}
+.nav li.nav-item {
+  align-items: center;
+}
+.nav li.nav-item .nav-link {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav li.nav-item .nav-link div.nav-text {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .header {
-    border-radius: 1rem 0 0 0;
-  }
-  .header .menu {
-    display: flex;
-    justify-content: space-between;
-    margin: 16px 32px 16px 16px;
-  }
-  .header .menu .menu-item .menu-link {
-    display: flex;
-  }
-  .header .menu .menu-item .menu-link div {
-    display: inline;
-    margin-left: 8px;
+  .nav {
+    border-radius: 1rem 0px 0px 0px;
   }
 }
 *,
@@ -10847,20 +10841,29 @@ body {
 }
 
 .index-wrapper {
+  height: 100vh;
   margin: 0;
 }
-.index-wrapper {
+
+.left-section {
+  height: 100vh;
+  overflow-y: hidden;
+  padding: 0;
+}
+
+.tab-header {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: auto;
   overflow-x: hidden;
 }
-.index-wrapper::-webkit-scrollbar {
+.tab-header::-webkit-scrollbar {
   display: none;
 }
 
-.left-section {
-  padding: 0;
+.tab-content {
+  height: 100%;
+  overflow-y: auto;
 }
 
 .greeting-section {
@@ -10868,17 +10871,20 @@ body {
 }
 
 @media (min-width: 768px) {
+  .left-section {
+    border-right: 1px solid #dee2e6;
+  }
   .index-wrapper {
     margin: 24px 24px;
   }
   .greeting-section {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
 }
+
 *,
 *::before,
 *::after {
@@ -10965,57 +10971,52 @@ a > .contacts-body:hover .contacts-status {
   margin-right: 40px;
 }
 
-.header {
+.nav {
   background-color: #4545a5;
   font-size: 0.875rem;
-  overflow: hidden;
-}
-.header a {
-  color: #fbfbfb;
-}
-.header .menu {
+  padding: 1rem;
   display: grid;
-  grid-template: auto/auto minmax(auto, 180px) auto auto auto;
-  grid-template-areas: "logo . contacts messages profile";
   align-items: center;
-  margin: 16px 16px 16px 16px;
+  grid-template: auto/auto minmax(auto, 180px) auto auto auto;
 }
-.header .menu .menu-logo {
-  grid-area: logo;
+.nav .logo-item {
+  grid-column: 1/2;
+  padding-left: 0;
 }
-.header .menu .menu-contacts {
-  grid-area: contacts;
+.nav .contacts-item {
+  grid-column: 3/4;
 }
-.header .menu .menu-messages {
-  grid-area: messages;
+.nav .chats-item {
+  grid-column: 4/5;
 }
-.header .menu .menu-profile {
-  grid-area: profile;
+.nav .profile-item {
+  grid-column: 5/6;
+  padding-right: 27px;
 }
-.header .menu .menu-item .menu-link div {
+.nav li {
+  padding-left: 40px;
+}
+.nav li.nav-item {
+  align-items: center;
+}
+.nav li.nav-item .nav-link {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.nav li.nav-item .nav-link div.nav-text {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .header {
-    border-radius: 1rem 0 0 0;
-  }
-  .header .menu {
-    display: flex;
-    justify-content: space-between;
-    margin: 16px 32px 16px 16px;
-  }
-  .header .menu .menu-item .menu-link {
-    display: flex;
-  }
-  .header .menu .menu-item .menu-link div {
-    display: inline;
-    margin-left: 8px;
+  .nav {
+    border-radius: 1rem 0px 0px 0px;
   }
 }
 .mgr-40 {
   margin-right: 40px;
 }
+
 .mgr-40 {
   margin-right: 40px;
 }
