@@ -46,7 +46,6 @@
 
       div.nav-text {
         display: none;
-        // color: $white-fb;
       }
     }
   }
@@ -54,29 +53,24 @@
 
 @media (min-width: 768px) {
   .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px 16px 16px;
     border-radius: $spacer 0px 0px 0px;
+
+    li.nav-item {
+      padding: 0;
+
+      .nav-link {
+        display: flex;
+
+        div.nav-text {
+          display: inline;
+          padding-left: 8px;
+
+          color: $white-fb;
+        }
+      }
+    }
   }
 }
-
-// @media (min-width: 768px) {
-//   .header {
-//     border-radius: $border-radius-xl 0 0 0;
-//     .menu {
-//       display: flex;
-//       justify-content: space-between;
-//       margin: 16px 32px 16px 16px;
-
-//       .menu-item {
-//         .menu-link {
-//           display: flex;
-
-//           div {
-//             display: inline;
-
-//             margin-left: 8px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }

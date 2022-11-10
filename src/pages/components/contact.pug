@@ -37,19 +37,15 @@
     }],
   }
 
-//- .tab-header
-//-   .h2.title.mt-5.mx-4.mb-4 Контакты
-//-   include search.pug
-
 .tab-body
-  each users, letter in contacts
-    .text-muted.font-size-base.mx-3.mt-5.mb-3 #{letter}
-    a(href="", class="contacts-group")
-      each user in users
-        .contacts-body.row.py-4.mx-4.border-bottom
-          .col-auto.p-0
-            .contacts-ava.ms-3
-              img(src=`${user.avatar}`, alt="user avatar", width="50px", height="50px", class="rounded-circle")
-          .col.ms-4.p-0
-            p.m-0.contacts-name.font-size-base.fw-bold #{user.name}
-            p.m-0.contacts-status.font-size-sm.text-muted #{user.status}
+  .contact-wrapper
+    each people, letter in contacts
+      .text-muted.font-size-base #{letter}
+
+        each person in people
+          a(href="", class="user-info border-bottom")
+            .user-ava
+              img(src=`${person.avatar}`, alt="person avatar", width="50px", height="50px", class="rounded-circle")
+            .info
+              .user-name.font-size-base.fw-bold #{person.name}
+              .user-status.font-size-sm.text-muted #{person.status}

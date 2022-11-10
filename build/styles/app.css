@@ -10747,7 +10747,21 @@ textarea.form-control-lg {
 
 @media (min-width: 768px) {
   .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px 16px 16px;
     border-radius: 1rem 0px 0px 0px;
+  }
+  .nav li.nav-item {
+    padding: 0;
+  }
+  .nav li.nav-item .nav-link {
+    display: flex;
+  }
+  .nav li.nav-item .nav-link div.nav-text {
+    display: inline;
+    padding-left: 8px;
+    color: #fbfbfb;
   }
 }
 *,
@@ -10814,23 +10828,66 @@ img {
   margin-right: 40px;
 }
 
-.contacts-body {
-  align-items: center;
-}
-.contacts-body .contacts-name {
-  color: #212529;
-}
-.contacts-body .contacts-status {
-  color: #6c757d;
+.tab-body {
+  padding: 48px 24px 0;
 }
 
-a > .contacts-body:hover {
+.contact-wrapper {
+  display: grid;
+  gap: 48px;
+}
+
+.chat-wrapper {
+  display: grid;
+  gap: 16px;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 24px 40px 24px 16px;
+}
+.user-info .user-name {
+  color: #212529;
+}
+.user-info .user-time {
+  color: #adb5bd;
+}
+.user-info .user-status {
+  color: #6c757d;
+}
+.user-info .info {
+  margin-left: 24px;
+}
+.user-info .chat-info {
+  display: grid;
+  grid-template-areas: "name time" "mess mess";
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  padding-left: 24px;
+  overflow: hidden;
+}
+.user-info .chat-info .user-name {
+  grid-area: name;
+}
+.user-info .chat-info .user-time {
+  grid-area: time;
+}
+.user-info .chat-info .user-message {
+  grid-area: mess;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+a.user-info:hover {
   background-color: #4545a5;
 }
-a > .contacts-body:hover .contacts-name {
+a.user-info:hover .info .user-name {
   color: #fbfbfb;
 }
-a > .contacts-body:hover .contacts-status {
+a.user-info:hover .info .user-status {
   color: #efefef;
 }
 
@@ -10838,19 +10895,19 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
 }
-body {
+
+.index-wrapper {
+  height: 100vh;
+  margin: 0;
+}
+.index-wrapper {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: auto;
   overflow-x: hidden;
 }
-body::-webkit-scrollbar {
+.index-wrapper::-webkit-scrollbar {
   display: none;
-}
-
-.index-wrapper {
-  height: 100vh;
-  margin: 0;
 }
 
 .left-section {
@@ -10883,6 +10940,7 @@ body::-webkit-scrollbar {
     margin: 24px 24px;
   }
   .greeting-section {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10953,29 +11011,6 @@ img {
   margin-right: 40px;
 }
 
-.contacts-body {
-  align-items: center;
-}
-.contacts-body .contacts-name {
-  color: #212529;
-}
-.contacts-body .contacts-status {
-  color: #6c757d;
-}
-
-a > .contacts-body:hover {
-  background-color: #4545a5;
-}
-a > .contacts-body:hover .contacts-name {
-  color: #fbfbfb;
-}
-a > .contacts-body:hover .contacts-status {
-  color: #efefef;
-}
-.mgr-40 {
-  margin-right: 40px;
-}
-
 .nav {
   background-color: #4545a5;
   font-size: 0.875rem;
@@ -11015,7 +11050,21 @@ a > .contacts-body:hover .contacts-status {
 
 @media (min-width: 768px) {
   .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px 16px 16px;
     border-radius: 1rem 0px 0px 0px;
+  }
+  .nav li.nav-item {
+    padding: 0;
+  }
+  .nav li.nav-item .nav-link {
+    display: flex;
+  }
+  .nav li.nav-item .nav-link div.nav-text {
+    display: inline;
+    padding-left: 8px;
+    color: #fbfbfb;
   }
 }
 .mgr-40 {
@@ -11038,6 +11087,72 @@ a > .contacts-body:hover .contacts-status {
 }
 .search-block input::placeholder {
   color: #6c757d;
+}
+.mgr-40 {
+  margin-right: 40px;
+}
+
+.tab-body {
+  padding: 48px 24px 0;
+}
+
+.contact-wrapper {
+  display: grid;
+  gap: 48px;
+}
+
+.chat-wrapper {
+  display: grid;
+  gap: 16px;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 24px 40px 24px 16px;
+}
+.user-info .user-name {
+  color: #212529;
+}
+.user-info .user-time {
+  color: #adb5bd;
+}
+.user-info .user-status {
+  color: #6c757d;
+}
+.user-info .info {
+  margin-left: 24px;
+}
+.user-info .chat-info {
+  display: grid;
+  grid-template-areas: "name time" "mess mess";
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  padding-left: 24px;
+  overflow: hidden;
+}
+.user-info .chat-info .user-name {
+  grid-area: name;
+}
+.user-info .chat-info .user-time {
+  grid-area: time;
+}
+.user-info .chat-info .user-message {
+  grid-area: mess;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+a.user-info:hover {
+  background-color: #4545a5;
+}
+a.user-info:hover .info .user-name {
+  color: #fbfbfb;
+}
+a.user-info:hover .info .user-status {
+  color: #efefef;
 }
 .mgr-40 {
   margin-right: 40px;

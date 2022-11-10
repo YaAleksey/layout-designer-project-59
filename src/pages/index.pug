@@ -14,23 +14,29 @@ html(lang="en")
       .container-fluid.bg-light
         .row
           .left-section.col-12.col-md-6.col-xl-4.d-flex.flex-column
-            div(class="tab-content", id="pills-tabcontent")
+            div(class="tab-content order-md-2", id="pills-tabcontent")
               div(class="tab-pane fade show active", id="contacts", role="tabpanel", aria-labelledby="pills-contacts-tab")
                 .tab-header.bg-light
                   h2.mb-0 Контакты
-                  include components/search.pug
+                  .search-block.border-bottom.rounded-2
+                    input(type="search", class="search-field bg-light", placeholder="Поиск по контактам")
+
                 include components/contact.pug
                 
               div(class="tab-pane fade", id="chats", role="tabpanel", aria-labelledby="pills-chats-tab")
                 .tab-header.bg-light
-                  .h2 Сообщения
-                  include components/search.pug
+                  h2.mb-0 Чаты
+                  .search-block.border-bottom.rounded-2
+                    input(type="search", class="search-field bg-light", placeholder="Поиск по сообщениям")
+
                 include components/chats.pug
                 
               div(class="tab-pane fade", id="profile", role="tabpanel", aria-labelledby="pills-profile-tab")
                 .tab-header.bg-light
-                  .h2 Профиль
-                  include components/search.pug
+                  h2.mb-0 Профиль
+                  .search-block.border-bottom.rounded-2
+                    input(type="search", class="search-field bg-light", placeholder="Поиск по сообщениям")
+
                 include components/profile.pug
 
             include components/header.pug

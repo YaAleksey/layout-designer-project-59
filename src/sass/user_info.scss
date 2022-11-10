@@ -1,0 +1,86 @@
+@import "./myVariables";
+@import "../../node_modules/bootstrap/scss/variables";
+
+.tab-body {
+  padding: 48px 24px 0;
+}
+
+.contact-wrapper {
+  display: grid;
+  gap: 48px;
+}
+
+.chat-wrapper {
+  display: grid;
+  gap: 16px;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+
+  align-items: center;
+  padding: 24px 40px 24px 16px;
+
+  .user-ava {
+  }
+
+  .user-name {
+    color: $gray-900;
+  }
+
+  .user-time {
+    color: $gray-500;
+  }
+
+  .user-status {
+    color: $gray-600;
+  }
+
+  .info {
+    margin-left: 24px;
+  }
+
+  .chat-info {
+    display: grid;
+
+    grid-template-areas:
+      "name time"
+      "mess mess";
+
+    grid-template-columns: 1fr auto;
+
+    justify-content: space-between;
+    padding-left: 24px;
+
+    overflow: hidden;
+
+    .user-name {
+      grid-area: name;
+    }
+    .user-time {
+      grid-area: time;
+    }
+    .user-message {
+      grid-area: mess;
+
+      overflow-x: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+a.user-info:hover {
+  background-color: $lilac;
+
+  .info {
+    .user-name {
+      color: $white-fb;
+    }
+
+    .user-status {
+      color: $gray-ef;
+    }
+  }
+}
