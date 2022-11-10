@@ -3655,7 +3655,6 @@ textarea.form-control-lg {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: var(--bs-nav-pills-link-active-color);
-  background-color: var(--bs-nav-pills-link-active-bg);
 }
 
 .nav-fill > .nav-link,
@@ -10839,6 +10838,15 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
 }
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .index-wrapper {
   height: 100vh;
@@ -10852,13 +10860,10 @@ body {
 }
 
 .tab-header {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.tab-header::-webkit-scrollbar {
-  display: none;
+  position: sticky;
+  top: 0;
+  padding: 48px 24px 0;
+  background-color: rgb(255, 255, 255);
 }
 
 .tab-content {
@@ -11025,6 +11030,7 @@ a > .contacts-body:hover .contacts-status {
   display: flex;
   align-items: center;
   height: 72px;
+  margin-top: 24px;
 }
 .search-block input {
   width: 100%;
