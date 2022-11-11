@@ -10881,6 +10881,48 @@ img {
   text-overflow: ellipsis;
 }
 
+.greeting-wrapper {
+  padding: 64px 24px 0;
+}
+.greeting-wrapper .profile-greeting {
+  display: grid;
+  gap: 16px;
+  justify-content: center;
+  text-align: center;
+}
+.greeting-wrapper .profile-greeting .profile-title {
+  color: #343a40;
+}
+.greeting-wrapper .profile-greeting .profile-annotation {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.cards-wrapper {
+  padding: 48px 40px 56px;
+}
+.cards-wrapper .profile-card {
+  display: grid;
+  grid-template-areas: "card-title card-logo" "card-info card-logo";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #efefef;
+}
+.cards-wrapper .profile-card .card-title {
+  grid-area: card-title;
+  color: rgba(0, 0, 0, 0.5);
+}
+.cards-wrapper .profile-card .card-info {
+  grid-area: card-info;
+  color: #343a40;
+}
+.cards-wrapper .profile-card .card-logo {
+  display: grid;
+  grid-area: card-logo;
+  align-self: center;
+}
+
 a.user-info:hover {
   background-color: #4545a5;
 }
@@ -10891,14 +10933,19 @@ a.user-info:hover .info .user-status {
   color: #efefef;
 }
 
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("../fonts/Roboto-Medium.ttf");
+}
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
+  background-color: #e5e5e5;
 }
 
 .index-wrapper {
-  height: 100vh;
   margin: 0;
+  border-radius: 1rem;
 }
 .index-wrapper {
   -ms-overflow-style: none;
@@ -11143,6 +11190,48 @@ img {
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.greeting-wrapper {
+  padding: 64px 24px 0;
+}
+.greeting-wrapper .profile-greeting {
+  display: grid;
+  gap: 16px;
+  justify-content: center;
+  text-align: center;
+}
+.greeting-wrapper .profile-greeting .profile-title {
+  color: #343a40;
+}
+.greeting-wrapper .profile-greeting .profile-annotation {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.cards-wrapper {
+  padding: 48px 40px 56px;
+}
+.cards-wrapper .profile-card {
+  display: grid;
+  grid-template-areas: "card-title card-logo" "card-info card-logo";
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #efefef;
+}
+.cards-wrapper .profile-card .card-title {
+  grid-area: card-title;
+  color: rgba(0, 0, 0, 0.5);
+}
+.cards-wrapper .profile-card .card-info {
+  grid-area: card-info;
+  color: #343a40;
+}
+.cards-wrapper .profile-card .card-logo {
+  display: grid;
+  grid-area: card-logo;
+  align-self: center;
 }
 
 a.user-info:hover {
