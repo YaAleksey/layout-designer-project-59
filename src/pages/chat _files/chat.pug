@@ -6,7 +6,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Layout-designer-project-59
   
-    link(rel="stylesheet", href="./styles/app.css")
+    link(rel="stylesheet", href="./styles/chat.css")
     
 
   body
@@ -15,13 +15,16 @@ html(lang="en")
         .row
           .left-section.col-12.col-md-6.col-xl-4.d-flex.flex-column
             div(class="tab-content order-md-2", id="pills-tabcontent")
+              div(class="tab-pane fade", id="current-chat", role="tabpanel", aria-labelledby="pills-chat-tab")
+                include ./chat_list.pug
+
               div(class="tab-pane fade show active", id="contacts", role="tabpanel", aria-labelledby="pills-contacts-tab")
                 .tab-header.bg-light
                   h2.mb-0 Контакты
                   .search-block.border-bottom.rounded-2
                     input(type="search", class="search-field bg-light", placeholder="Поиск по контактам")
 
-                include components/contact.pug
+                include ../components/contact.pug
                 
               div(class="tab-pane fade", id="chats", role="tabpanel", aria-labelledby="pills-chats-tab")
                 .tab-header.bg-light
@@ -29,7 +32,7 @@ html(lang="en")
                   .search-block.border-bottom.rounded-2
                     input(type="search", class="search-field bg-light", placeholder="Поиск по сообщениям")
 
-                include components/chats.pug
+                include ../components/chats.pug
                 
               div(class="tab-pane fade", id="profile", role="tabpanel", aria-labelledby="pills-profile-tab")
                 .tab-header.bg-light
@@ -37,13 +40,13 @@ html(lang="en")
                   .search-block.border-bottom.rounded-2
                     input(type="search", class="search-field bg-light", placeholder="Поиск по сообщениям")
 
-                include components/profile.pug
+                include ../components/profile.pug
 
-            include components/header_for_chat.pug
+            include ./header_for_chat.pug
 
           .main-section.col-12.col-md-6.col-xl-8
             .greeting-section
-              include components/avatar.pug
+              include ../components/avatar.pug
 
     script(defer src="../src/js/popper.min.js")
     script(defer src="../src/js/bootstrap.min.js")

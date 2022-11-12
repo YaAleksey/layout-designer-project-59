@@ -28,6 +28,22 @@ const pug2html = () => {
     .pipe(browserSync.stream())
 };
 
+const sass2css_chat = () => {
+  return src('./src/sass/chat_files_scss/*.scss')
+    .pipe(sass())
+    .pipe(concat('chat.css'))
+    .pipe(dest('./build/styles/'))
+    .pipe(browserSync.stream())
+};
+
+const pug2html_chat = () => {
+  return src('./src/pages/chat_files/*.pug')
+    .pipe(pug())
+    .pipe(concat('chat.html'))
+    .pipe(dest('./build/'))
+  // .pipe(browserSync.stream())
+};
+
 const destImages = () => {
   return src(['./src/images/*'])
     .pipe(dest('./build/images/'))
@@ -56,6 +72,16 @@ const startWatch = () => {
   watch('./**/*.pug', pug2html);
 };
 
+// const startWatch_chat = () => {
+//   watch('./src/sass/chat_files_scss/*.scss', sass2css_chat);
+//   watch('./src/pages/chat_files/*.pug', pug2html_chat);
+// };
+
+const startWatch_chat = () => {
+  watch('./src/sass/chat_files_scss/*.scss', sass2css_chat);
+  watch('./src/pages/chat_files/*.pug', pug2html_chat);
+};
+
 const build = () => {
   sass2css();
   pug2html();
@@ -69,5 +95,6 @@ exports.copyJS = copyJS;
 
 exports.build = build;
 
-// exports.default = parallel(sass2css, pug2html, browsersync, startWatch);
-exports.default = parallel(sass2css, pug2html, startWatch);
+exports.index = parallel(sass2css, pug2html, startWatch);
+
+exports.chat = parallel(sass2css_chat, pug2html_chat, startWatch_chat);

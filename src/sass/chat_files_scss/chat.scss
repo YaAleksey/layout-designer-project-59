@@ -1,14 +1,9 @@
-@import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import "./myVariables";
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../myVariables";
 
-@import "header";
-@import "cleanPage";
-@import "user_info";
-
-@font-face {
-  font-family: "Roboto Regular";
-  src: url("../fonts/Roboto-Medium.ttf");
-}
+@import "./header_for_chat.scss";
+@import "../cleanPage.scss";
+@import "../user_info.scss";
 
 body {
   height: 100vh;

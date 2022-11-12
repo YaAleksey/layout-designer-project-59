@@ -10720,6 +10720,9 @@ textarea.form-control-lg {
   grid-column: 1/2;
   padding-left: 0;
 }
+.nav .chat-item {
+  grid-column: 2/3;
+}
 .nav .contacts-item {
   grid-column: 3/4;
 }
@@ -10933,10 +10936,6 @@ a.user-info:hover .info .user-status {
   color: #efefef;
 }
 
-@font-face {
-  font-family: "Roboto Regular";
-  src: url("../fonts/Roboto-Medium.ttf");
-}
 body {
   height: 100vh;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -10997,66 +10996,6 @@ body::-webkit-scrollbar {
     text-align: center;
   }
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
-:focus,
-:active {
-  outline: none;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
 .mgr-40 {
   margin-right: 40px;
 }
@@ -11072,6 +11011,9 @@ img {
 .nav .logo-item {
   grid-column: 1/2;
   padding-left: 0;
+}
+.nav .chat-item {
+  grid-column: 2/3;
 }
 .nav .contacts-item {
   grid-column: 3/4;
@@ -11116,136 +11058,4 @@ img {
     padding-left: 8px;
     color: #fbfbfb;
   }
-}
-.mgr-40 {
-  margin-right: 40px;
-}
-
-.mgr-40 {
-  margin-right: 40px;
-}
-
-.search-block {
-  display: flex;
-  align-items: center;
-  height: 72px;
-  margin-top: 24px;
-}
-.search-block input {
-  width: 100%;
-  padding: 0 24px;
-}
-.search-block input::placeholder {
-  color: #6c757d;
-}
-.mgr-40 {
-  margin-right: 40px;
-}
-
-.tab-body {
-  padding: 48px 24px 0;
-}
-
-.contact-wrapper {
-  display: grid;
-  gap: 48px;
-}
-
-.chat-wrapper {
-  display: grid;
-  gap: 16px;
-}
-
-.user-info {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  padding: 24px 40px 24px 16px;
-}
-.user-info .user-name {
-  color: #212529;
-}
-.user-info .user-time {
-  color: #adb5bd;
-}
-.user-info .user-status {
-  color: #6c757d;
-}
-.user-info .info {
-  margin-left: 24px;
-}
-.user-info .chat-info {
-  display: grid;
-  grid-template-areas: "name time" "mess mess";
-  grid-template-columns: 1fr auto;
-  justify-content: space-between;
-  padding-left: 24px;
-  overflow: hidden;
-}
-.user-info .chat-info .user-name {
-  grid-area: name;
-}
-.user-info .chat-info .user-time {
-  grid-area: time;
-}
-.user-info .chat-info .user-message {
-  grid-area: mess;
-  overflow-x: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.greeting-wrapper {
-  padding: 64px 24px 0;
-}
-.greeting-wrapper .profile-greeting {
-  display: grid;
-  gap: 16px;
-  justify-content: center;
-  text-align: center;
-}
-.greeting-wrapper .profile-greeting .profile-title {
-  color: #343a40;
-}
-.greeting-wrapper .profile-greeting .profile-annotation {
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.cards-wrapper {
-  padding: 48px 40px 56px;
-}
-.cards-wrapper .profile-card {
-  display: grid;
-  grid-template-areas: "card-title card-logo" "card-info card-logo";
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto auto;
-  align-items: center;
-  padding: 8px 16px;
-  border-bottom: 1px solid #efefef;
-}
-.cards-wrapper .profile-card .card-title {
-  grid-area: card-title;
-  color: rgba(0, 0, 0, 0.5);
-}
-.cards-wrapper .profile-card .card-info {
-  grid-area: card-info;
-  color: #343a40;
-}
-.cards-wrapper .profile-card .card-logo {
-  display: grid;
-  grid-area: card-logo;
-  align-self: center;
-}
-
-a.user-info:hover {
-  background-color: #4545a5;
-}
-a.user-info:hover .info .user-name {
-  color: #fbfbfb;
-}
-a.user-info:hover .info .user-status {
-  color: #efefef;
-}
-.mgr-40 {
-  margin-right: 40px;
 }
